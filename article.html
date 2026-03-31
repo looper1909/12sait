@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статья - PhotoWorld</title>
+    <link rel="stylesheet" href="styleSheet1.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container header-container">
+            <div class="logo"><a href="index.html">PhotoWorld</a></div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <input type="text" placeholder="Поиск" class="search-input">
+                <div class="cart-icon" style="cursor: pointer; padding: 5px 10px; background: #ff0000; border-radius: 5px;">
+                    Корзина <span id="cartCount">0</span>
+                </div>
+                <div class="burger" id="burgerBtn"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>5 советов для портретной съемки</h1>
+        <p style="color: gray;">15 марта 2026 | Автор: PhotoWorld</p>
+        <img src="gg1.jpg" style="width:100%; margin: 20px 0;">
+
+        <h2>1. Правильный свет</h2>
+        <p>Используйте естественный свет от окна - он дает мягкие тени и приятные блики.</p>
+
+        <h2>2. Выбор фона</h2>
+        <p>Простой фон без лишних деталей помогает сконцентрироваться на модели.</p>
+
+        <h2>3. Работа с моделью</h2>
+        <p>Разговаривайте с моделью, чтобы получить естественные эмоции.</p>
+
+        <h3>Похожие статьи</h3>
+        <ul>
+            <li><a href="article.html">Как выбрать камеру для начинающих</a></li>
+            <li><a href="article.html">Обработка фото в Lightroom</a></li>
+        </ul>
+    </main>
+
+    <footer>
+        <div class="container">© <span id="currentYear"></span> PhotoWorld</div>
+    </footer>
+    <script src="script.js"></script>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal"> &times;</span>
+            <h2> Ваша корзина</h2>
+            <ul id="cartItemList"> </ul>
+            <div class="cart-total">
+                <button id="checkoutBtn" class="btn btn-primary"> Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

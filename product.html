@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--<meta charset="UTF-8">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canon EOS R50 - PhotoWorld</title>
+    <link rel="stylesheet" href="styleSheet1.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container header-container">
+            <div class="logo"><a href="index.html">PhotoWorld</a></div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <input type="text" placeholder="Поиск" class="search-input">
+                <div class="cart-icon" style="cursor: pointer; padding: 5px 10px; background: #ff0000; border-radius: 5px;">
+                    Корзина <span id="cartCount">0</span>
+                </div>
+                <div class="burger" id="burgerBtn"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="product-detail">
+            <div><img src="product1.jpg" style="width:100%;"></div>
+            <div>
+                <h1>Canon EOS R50</h1>
+                <div class="price">64 990 ₽</div>
+                <button class="btn btn-primary add-to-cart">Добавить в корзину</button>
+
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="desc">Описание</button>
+                        <button class="tab-btn" data-tab="chars">Характеристики</button>
+                    </div>
+                    <div id="desc" class="tab-pane active">
+                        <p>Компактная камера с 24 МП, 4K видео.</p>
+                    </div>
+                    <div id="chars" class="tab-pane">
+                        <p>Матрица: 24.2 МП<br>Вес: 375 г<br>4K видео</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">© <span id="currentYear"></span> PhotoWorld</div>
+    </footer>
+    <script src="script.js"></script>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal"> &times;</span>
+            <h2> Ваша корзина</h2>
+            <ul id="cartItemList"> </ul>
+            <div class="cart-total">
+                <button id="checkoutBtn" class="btn btn-primary"> Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

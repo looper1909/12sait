@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — PhotoWorld</title>
+    <link rel="stylesheet" href="styleSheet1.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container header-container">
+            <div class="logo"><a href="index.html">PhotoWorld</a></div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="cart-icon"> Корзина <span id="cartCount">0</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section style="padding: 40px 0; text-align: center;">
+            <h1>Свяжитесь с нами</h1>
+            <p>Мы ответим на любые вопросы о технике и заказах</p>
+        </section>
+
+        <div class="contact-row">
+            <!-- Левая колонка: Форма -->
+            <div class="contact-form-card">
+                <h3>Напишите нам</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" id="conName" required placeholder="Иван Иванов">
+                    </div>
+                    <div class="form-group">
+                        <label>Ваш Email</label>
+                        <input type="email" id="conEmail" required placeholder="example@mail.ru">
+                    </div>
+                    <div class="form-group">
+                        <label>Сообщение</label>
+                        <textarea id="conMessage" rows="5" required placeholder="Чем мы можем помочь?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить сообщение</button>
+                </form>
+            </div>
+
+            <!-- Правая колонка: Информация -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <h4> Адрес</h4>
+                    <p>г. Москва, ул. Фотографов, д. 24, офис 102</p>
+                </div>
+                <div class="info-item">
+                    <h4> Телефон</h4>
+                    <p>+7 (999) 000-11-22</p>
+                </div>
+                <div class="info-item">
+                    <h4>Email</h4>
+                    <p>support@photoworld.ru</p>
+                </div>
+                <!-- Заглушка карты -->
+                <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_URL" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- КОРЗИНА (обязательно для всех страниц) -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Ваша корзина</h2>
+            <ul id="cartItemList"></ul>
+            <div class="cart-total">
+                <button id="checkoutBtn" class="btn btn-primary">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container" style="padding: 20px 0; text-align: center;">
+            © <span id="currentYear"></span> PhotoWorld
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

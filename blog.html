@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--<meta charset="UTF-8">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - PhotoWorld</title>
+    <link rel="stylesheet" href="styleSheet1.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container header-container">
+            <div class="logo"><a href="index.html">PhotoWorld</a></div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html" class="active">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <input type="text" placeholder="Поиск" class="search-input">
+                <div class="cart-icon" style="cursor: pointer; padding: 5px 10px; background: #ff0000; border-radius: 5px;">
+                    Корзина <span id="cartCount">0</span>
+                </div>
+                <div class="burger" id="burgerBtn"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Блог</h1>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <img src="https://placehold.co/400x200/2C3E50/white?text=Portrait">
+                <h3>5 советов для портрета</h3>
+                <p>Как выбрать свет и фон...</p>
+                <a href="article.html" class="btn btn-primary">Читать</a>
+            </div>
+            <div class="blog-card">
+                <img src="https://placehold.co/400x200/2C3E50/white?text=Landscape">
+                <h3>Пейзажная съемка</h3>
+                <p>Лучшие места для фото...</p>
+                <a href="article.html" class="btn btn-primary">Читать</a>
+            </div>
+            <div class="blog-card">
+                <img src="https://placehold.co/400x200/2C3E50/white?text=Lens">
+                <h3>Выбор объектива</h3>
+                <p>Какой объектив купить новичку...</p>
+                <a href="article.html" class="btn btn-primary">Читать</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">© <span id="currentYear"></span> PhotoWorld</div>
+    </footer>
+    <script src="script.js"></script>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal"> &times;</span>
+            <h2> Ваша корзина</h2>
+            <ul id="cartItemList"> </ul>
+            <div class="cart-total">
+                <button id="checkoutBtn" class="btn btn-primary"> Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--<meta charset="UTF-8">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - PhotoWorld</title>
+    <link rel="stylesheet" href="styleSheet1.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container header-container">
+            <div class="logo"><a href="index.html">PhotoWorld</a></div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html" class="active">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <input type="text" placeholder="Поиск" class="search-input">
+                <div class="cart-icon" style="cursor: pointer; padding: 5px 10px; background: #ff0000; border-radius: 5px;">
+                    Корзина <span id="cartCount">0</span>
+                </div>
+                <div class="burger" id="burgerBtn"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Каталог</h1>
+        <div class="catalog-layout">
+            <aside class="filters">
+                <h3>Категории</h3>
+                <ul id="filterList">
+                    <li data-cat="all" class="active-filter">Все</li>
+                    <li data-cat="camera">Камеры</li>
+                    <li data-cat="lens">Объективы</li>
+                    <li data-cat="accessory">Аксессуары</li>
+                </ul>
+            </aside>
+            <div class="product-grid" id="catalogGrid">
+                <div class="product-card" data-cat="camera">
+                    <img src="catalog1.jpg">
+                    <h3>Nikon Z30</h3>
+                    <div class="price">58 990 ₽</div>
+                    <button class="btn btn-primary add-to-cart">В корзину</button>
+                </div>
+                <div class="product-card" data-cat="camera">
+                    <img src="catalog2.jpg">
+                    <h3>Canon EOS R10</h3>
+                    <div class="price">79 990 ₽</div>
+                    <button class="btn btn-primary add-to-cart">В корзину</button>
+                </div>
+                <div class="product-card" data-cat="lens">
+                    <img src="catalog3.jpg">
+                    <h3>Sigma 30mm f/1.4</h3>
+                    <div class="price">32 990 ₽</div>
+                    <button class="btn btn-primary add-to-cart">В корзину</button>
+                </div>
+                <div class="product-card" data-cat="lens">
+                    <img src="catalog4.jpg">
+                    <h3>Canon 50mm f/1.8</h3>
+                    <div class="price">14 990 ₽</div>
+                    <button class="btn btn-primary add-to-cart">В корзину</button>
+                </div>
+                <div class="product-card" data-cat="accessory">
+                    <img src="catalog5.jpg">
+                    <h3>Карта памяти 128GB</h3>
+                    <div class="price">2 990 ₽</div>
+                    <button class="btn btn-primary add-to-cart">В корзину</button>
+                </div>
+                <div class="product-card" data-cat="accessory">
+                    <img src="catalog6.jpg">
+                    <h3>Сумка для фото</h3>
+                    <div class="price">3 990 ₽</div>
+                    <button class="btn btn-primary add-to-cart">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">© <span id="currentYear"></span> PhotoWorld</div>
+    </footer>
+    <script src="script.js"></script>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal"> &times;</span>
+            <h2> Ваша корзина</h2>
+            <ul id="cartItemList"> </ul>
+            <div class="cart-total">
+                <button id="checkoutBtn" class="btn btn-primary"> Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

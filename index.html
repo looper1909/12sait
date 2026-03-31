@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--<meta charset="UTF-8">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoWorld</title>
+    <link rel="stylesheet" href="styleSheet1.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container header-container">
+            <div class="logo"><a href="index.html">PhotoWorld</a></div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <input type="text" placeholder="Поиск" class="search-input">
+                <div class="cart-icon" style="cursor: pointer; padding: 5px 10px; background: #ff0000; border-radius: 5px;">
+                    Корзина <span id="cartCount">0</span>
+                </div>
+                <div class="burger" id="burgerBtn"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div style="text-align: center; padding: 60px 0;">
+                <h1>PhotoWorld</h1>
+                <p>Фототехника и аксессуары</p>
+                <a href="catalog.html" class="btn btn-primary">В каталог</a>
+            </div>
+            <!-- Секция: Галерея работ -->
+            <section class="container" style="margin-top: 50px;">
+                <h2 style="text-align: center;">Галерея снимков</h2>
+                <div class="photo-gallery">
+                    <img src="shot2.jpg" alt="Пример фото 1" class="gallery-img">
+                    <img src="shot1.jpg" alt="Пример фото 2" class="gallery-img">
+                    <img src="shot3.jpg" alt="Пример фото 3" class="gallery-img">
+                    <img src="shot4.jpg" alt="Пример фото 4" class="gallery-img">
+                </div>
+            </section>
+
+            <!-- Секция: Сравнение объективов -->
+            <section class="container" style="margin-top: 50px;">
+                <h2 style="text-align: center;">Сравнение объективов</h2>
+                <div class="compare-container" style="overflow-x: auto;">
+                    <table id="compareTable" class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Характеристика</th>
+                                <th>Sony 50mm f/1.8</th>
+                                <th>Canon 50mm f/1.8</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Данные подгрузятся через JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+
+            <h2>Популярные товары</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="index1.jpg">
+                    <h3>Canon EOS R50</h3>
+                    <div class="price">64 990 ₽</div>
+                    <button class="btn btn-primary add-to-cart">В корзину</button>
+                    <a href="product.html" class="btn" style="background:#ddd;">Подробнее</a>
+                </div>
+                <div class="product-card">
+                    <img src="index2.jpg">
+                    <h3>Sony 50mm f/1.8</h3>
+                    <div class="price">21 990 ₽</div>
+                    <button class="btn btn-primary add-to-cart">В корзину</button>
+                    <a href="product.html" class="btn" style="background:#ddd;">Подробнее</a>
+                </div>
+                <div class="product-card">
+                    <img src="index3.jpg">
+                    <h3>Manfrotto Штатив</h3>
+                    <div class="price">8 990 ₽</div>
+                    <button class="btn btn-primary add-to-cart">В корзину</button>
+                    <a href="product.html" class="btn" style="background:#ddd;">Подробнее</a>
+                </div>
+            </div>
+
+            <div style="background: #2C3E50; color: white; padding: 40px; text-align: center; margin: 40px 0;">
+                <h3>Скидка 10% за подписку</h3>
+                <input type="email" id="subEmail" placeholder="Email" style="padding: 8px; margin: 10px;">
+                <button id="subscribeBtn" class="btn btn-primary">Подписаться</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">© <span id="currentYear"></span> PhotoWorld. Учебный проект</div>
+    </footer>
+    <script src="script.js"></script>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal"> &times;</span>
+            <h2> Ваша корзина</h2>
+            <ul id="cartItemList"> </ul>
+            <div class="cart-total">
+                <button id="checkoutBtn" class="btn btn-primary"> Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+    <!-- Ваша шапка -->
+    <header class="sticky-header"> ... </header>
+
+    <!-- ВСЁ МЕЖДУ НИМИ ОБЕРНИТЕ В ЭТОТ ТЕГ -->
+    <main class="content-wrapper">
+        <!-- Сюда перенесите все ваши контейнеры, сетки товаров, формы и т.д. -->
+    </main>
+
+    <!-- Ваш футер -->
+    <footer> ... </footer>
+
+</body>
+</html>
